@@ -33,12 +33,12 @@ public class House extends Building {
     
   }
 
-  public void moveOut(String name){
+  public String moveOut(String name){
     if(residents.contains(name)){
       residents.remove(name);
-      System.out.println(name+" just moved out!");
+      return name;
     }else{
-      System.out.println("couldn't find this resident");
+      return null;
     }
   }
 
