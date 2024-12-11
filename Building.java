@@ -3,21 +3,27 @@ public class Building {
     protected String name = "<Name Unknown>";
     protected String address = "<Address Unknown>";
     protected int nFloors = 1;
+
     /**
      * Constructs a new Building object.
      *
-     * @param name the name of the building
+     * @param name    the name of the building
      * @param address the address of the building
      * @param nFloors the number of floors in the building
      */
     public Building(String name, String address, int nFloors) {
-        if (name != null) { this.name = name; }
-        if (address != null) { this.address = address; } 
+        if (name != null) {
+            this.name = name;
+        }
+        if (address != null) {
+            this.address = address;
+        }
         if (nFloors < 1) {
             throw new RuntimeException("Cannot construct a building with fewer than 1 floor.");
         }
         this.nFloors = nFloors;
     }
+
     /**
      * Returns the name of the building.
      *
@@ -26,6 +32,7 @@ public class Building {
     public String getName() {
         return this.name;
     }
+
     /**
      * Returns the address of the building.
      *
@@ -34,6 +41,7 @@ public class Building {
     public String getAddress() {
         return this.address;
     }
+
     /**
      * Returns the number of floors in the building.
      *
@@ -42,6 +50,7 @@ public class Building {
     public int getFloors() {
         return this.nFloors;
     }
+
     /**
      * Returns a string representation of the building.
      *
